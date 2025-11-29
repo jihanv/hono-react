@@ -19,10 +19,10 @@ function App() {
   return (
     <>
       <div>
-        Book List
+        <h1>Book List</h1>
         <ul>
           {books.map((book: Book) => (
-            <li key={book.id}>{book.title} by [book.author]</li>
+            <li key={book.id}>{book.title} by {book.author}</li>
           ))}
         </ul>
       </div>
