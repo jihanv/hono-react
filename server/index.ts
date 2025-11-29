@@ -2,7 +2,7 @@ import { Hono } from "hono";
 
 const app = new Hono();
 
-app.get("/api/books", (c) => {
+const route = app.get("/api/books", (c) => {
   return c.json([
     { id: 1, title: "1984", author: "George Orwell" },
     { id: 2, title: "To Kill a Mockingbird", author: "Harper Lee" },
@@ -11,4 +11,5 @@ app.get("/api/books", (c) => {
   ]);
 });
 
+export type AppType = typeof route;
 export default app;
