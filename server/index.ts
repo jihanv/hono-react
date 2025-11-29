@@ -1,9 +1,14 @@
-import { Hono } from 'hono'
+import { Hono } from "hono";
 
-const app = new Hono()
+const app = new Hono();
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+app.get("/api/books", (c) => {
+  return c.json([
+    { id: 1, title: "1984", author: "George Orwell" },
+    { id: 2, title: "To Kill a Mockingbird", author: "Harper Lee" },
+    { id: 3, title: "The great Gatsby", author: "F. Scott Fitzgerald" },
+    { id: 4, title: "The catcher in the Rye", author: "J.D. Salinger" },
+  ]);
+});
 
-export default app
+export default app;
