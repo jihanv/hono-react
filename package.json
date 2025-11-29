@@ -2,7 +2,7 @@
   "name": "react-hono-template",
   "scripts": {
     "dev": "concurrently \"bun run server\" \"bun run client\"",
-    "build": "bun build ./server/index.ts --outdir ./dist --target bun && cd client run build",
+    "build": "bun build ./server/index.ts --outdir ./dist --target bun && cd client && bun run build",
     "start": "bun run dist/index.js",
     "server": "bun run --hot server/index.ts",
     "client": "cd client && bun run dev"
